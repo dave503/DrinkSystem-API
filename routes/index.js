@@ -5,7 +5,7 @@ const controlCtl = require('../controllers/control')
 
 /* GET home page. */
 api.get('/', function(req, res, next) {
-  res.render('index', { title: 'DrinkSystem' });
+  res.send({message: "Todo bien, estamos trabajando!"});
 });
 
 api.post('/bebidas', controlCtl.Guardar)
