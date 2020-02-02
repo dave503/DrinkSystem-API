@@ -4,10 +4,14 @@ var path = require('path');
 var cookieParser = require('cookie-parser');
 var logger = require('morgan');
 
+var cors = require('cors')
+
 //var indexRouter = require('./api/index');
 //var usersRouter = require('./api/users');
 
 var app = express();
+
+app.use(cors())
 
 const api = require('./routes')
 
