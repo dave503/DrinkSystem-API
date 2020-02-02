@@ -22,7 +22,7 @@ function Guardar (req, res) {
       if (err) return res.status(500).send({message: `Error al realizar la petición: ${err}`})
       if (!ok) return res.status(404).send({message: 'No existen registros'})
   
-      res.send(200, { ok })
+      res.status(200).send({ ok })
     })
   }
 
