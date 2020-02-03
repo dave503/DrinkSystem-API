@@ -9,7 +9,9 @@ api.get('/', function(req, res, next) {
   res.status(200).send({message: "Todo bien, estamos trabajando!"});
 });
 
-api.post('/bebidas', controlCtl.Guardar)
-api.get('/control', controlCtl.Mostrar)
+api.post('/savebebidas', controlCtl.Guardar)
+api.get('/reporte', controlCtl.Mostrar)
+api.get('/usuarios', controlCtl.GetUser)
+api.get('/bebidas', controlCtl.GetBebidas)
 
 module.exports = api;

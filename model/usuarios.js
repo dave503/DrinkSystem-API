@@ -9,4 +9,4 @@ const users = schema({
     edad: Number
 })
 
-module.exports = mongoose.model('Users', users)
+module.exports = mongoose.model('users', users)

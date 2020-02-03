@@ -7,4 +7,4 @@ const bebidas = schema({
     tipo: String
 })
 
-module.exports = mongoose.model('Bebidas', bebidas)
+module.exports = mongoose.model('bebidas', bebidas)
