@@ -13,5 +13,5 @@ api.post('/savebebidas', controlCtl.Guardar)
 api.get('/reporte', controlCtl.Mostrar)
 api.get('/usuarios', controlCtl.GetUser)
 api.get('/bebidas', controlCtl.GetBebidas)
-
+//api.get('/fecha', controlCtl.SetFecha)
 module.exports = api;
