@@ -43,6 +43,17 @@ function Guardar (req, res) {
     })
   }
 
+  function GetUsuarios (req, res) {
+    let usuarioId = req.params.usuarioId
+  
+    User.findById(usuarioId, (err, usuario) => {
+      if (err) return res.status(500).send({message: `Error al realizar la petición: ${err}`})
+      if (!usuario) return res.status(404).send({message: `El producto no existe`})
+  
+      res.status(200).send({ usuario })
+    })
+  }
+
   function GetBebidas(req, res){
     Bebida.find({},(err, ok)=>{
       if (err) return res.status(500).send({message: `Error al realizar la petición: ${err}`})
@@ -63,6 +74,7 @@ function Guardar (req, res) {
   module.exports={
       Guardar,
       Mostrar,
+      GetUsuarios,
       //SetFecha,
       GetBebidas,
       GetUser
